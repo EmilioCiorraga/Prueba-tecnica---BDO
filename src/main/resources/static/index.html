@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidencias</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Incidencias</h1>
+        <label for="estado">Filtrar por estado:</label>
+        <select id="estado">
+            <option value="">Todos</option>
+            <option value="ABIERTA">Abierta</option>
+            <option value="EN_CURSO">En curso</option>
+            <option value="CERRADA">Cerrada</option>
+        </select>
+        <p id="mensaje" role="status" aria-live="polite"></p>
+        <div class="tabla-contenedor">
+            <table aria-label="Listado de incidencias">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Prioridad</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Usuario asignado</th>
+                    </tr>
+                </thead>
+                <tbody id="incidencias"></tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
